@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import logo from '../assets/Breaking_Bad_logo.svg';
 import Loading from '../components/Loading';
@@ -14,7 +14,7 @@ const Character = () => {
   const quotesUrl = `https://breakingbadapi.com/api/quotes/${id}`;
   console.log(characterUrl);
 
-  const fetchCharacter = async () => {
+  const fetchCharacter = useCallback(async () => {
     setIsLoading(true);
     const responseCharacter = await axios(characterUrl);
     const responseQuotes = await axios(quotesUrl);
@@ -23,11 +23,11 @@ const Character = () => {
     setQuotes(dataQuotes);
     setCharacter(dataCharacter);
     setIsLoading(false);
-  };
+  }, [characterUrl, quotesUrl]);
 
   useEffect(() => {
     fetchCharacter();
-  }, []);
+  }, [fetchCharacter]);
 
   const {
     appearance,
@@ -84,6 +84,3 @@ const Character = () => {
 };
 
 export default Character;
-{
-  /* absolute lg:top-20 lg:left-20 */
-}
