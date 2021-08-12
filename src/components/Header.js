@@ -21,7 +21,6 @@ const Header = ({ getSearchTerm }) => {
           placeholder="Search..."
           value={searchTerm}
           onChange={handleChange}
-          autoFocus
           className="mr-4 py-2 px-4 rounded-md focus:outline-none w-40 sm:w-52 md:w-60 lg:w-64"
         />
       </form>
