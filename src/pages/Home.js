@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from '../components/Header';
 import CharacterList from '../components/CharacterList';
-import Filter from '../components/Filter';
 import Pagination from '../components/Pagination';
 
 const Home = () => {
@@ -11,6 +10,7 @@ const Home = () => {
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+
   const pages = [...Array(totalPages).keys()].map((num) => num + 1);
 
   const charactersPerPage = 10;
@@ -65,7 +65,6 @@ const Home = () => {
   return (
     <div>
       <Header getSearchTerm={(e) => setQuery(e)} />
-      <Filter />
       <CharacterList
         selectedCharacters={selectedCharacters}
         page={page}

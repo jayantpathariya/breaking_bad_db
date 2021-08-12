@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Spinner = () => {
+const Loading = () => {
   return (
     <div className="flex items-center justify-center space-x-2 animate-bounce h-screen">
       <div className="w-8 h-8 bg-green-500 rounded-full"></div>
@@ -10,4 +10,4 @@ const Spinner = () => {
   );
 };
 
-export default Spinner;
+export default Loading;

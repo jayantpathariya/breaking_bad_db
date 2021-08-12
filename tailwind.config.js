@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
+      dancing: ['Dancing Script', 'cursive'],
     },
     maxHeight: {
       0: '0',

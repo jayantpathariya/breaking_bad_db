@@ -1,13 +1,13 @@
 import SingleCharacter from './SingleCharacter';
-import Spinner from '../components/Spinner';
+import Loading from '../components/Loading';
 
 const CharacterList = ({ selectedCharacters, isLoading }) => {
   return (
     <div>
       {isLoading ? (
-        <Spinner />
+        <Loading />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-20 gap-2">
           {selectedCharacters.length > 0 &&
             selectedCharacters.map((character) => {
               return <SingleCharacter key={character.char_id} {...character} />;
