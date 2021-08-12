@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import logo from '../assets/Breaking_Bad_logo.svg';
 import Loading from '../components/Loading';
 
@@ -46,10 +46,10 @@ const Character = () => {
     <div>
       <header className="bg-green-600 shadow-xl">
         <div className="flex items-center">
-          <div className="flex items-center">
+          <Link className="flex items-center" to="/">
             <img src={logo} alt="logo" className="w-20 h-20 ml-4" />
             <h1 className="ml-3 text-lg font-bold text-green-100">Db</h1>
-          </div>
+          </Link>
           <h1 className="text-green-100 ml-8 font-bold text-3xl">{name}</h1>
         </div>
       </header>

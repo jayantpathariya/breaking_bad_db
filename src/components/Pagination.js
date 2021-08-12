@@ -17,9 +17,9 @@ const Pagination = ({ totalPages, handleClick, prevPage, nextPage, index }) => {
           <button
             onClick={() => handleClick(page)}
             key={page}
-            className={`lg:px-4 lg:py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 px-2 py-1 ${
+            className={`lg:px-4 lg:py-2 sm:px-4 sm:py-2 md:px-4 md:py-2 px-2 py-0.5 ${
               index === page ? 'bg-white text-green-500' : 'bg-green-500'
-            } m-2 rounded font-bold text-green-200 `}
+            } m-1 lg:m-2 rounded font-bold text-green-200 `}
           >
             {page}
           </button>

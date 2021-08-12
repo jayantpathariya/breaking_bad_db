@@ -10,7 +10,7 @@ const Header = ({ getSearchTerm }) => {
   };
 
   return (
-    <header className="bg-green-600 flex justify-between items-center shadow-xl">
+    <header className="bg-green-600 w-full flex justify-between items-center shadow-xl">
       <div className="flex items-center">
         <img src={logo} alt="logo" className="w-20 h-20 ml-4" />
         <h1 className="ml-3 text-lg font-bold text-green-100">Db</h1>
@@ -22,7 +22,7 @@ const Header = ({ getSearchTerm }) => {
           value={searchTerm}
           onChange={handleChange}
           autoFocus
-          className="mr-4 py-2 px-4 rounded-md focus:outline-none"
+          className="mr-4 py-2 px-4 rounded-md focus:outline-none w-40 sm:w-52 md:w-60 lg:w-64"
         />
       </form>
     </header>
