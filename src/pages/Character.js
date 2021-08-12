@@ -12,7 +12,6 @@ const Character = () => {
 
   const characterUrl = `https://breakingbadapi.com/api/characters/${id}`;
   const quotesUrl = `https://breakingbadapi.com/api/quotes/${id}`;
-  console.log(characterUrl);
 
   const fetchCharacter = useCallback(async () => {
     setIsLoading(true);

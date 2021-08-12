@@ -2,7 +2,6 @@ import React from 'react';
 
 const Pagination = ({ totalPages, handleClick, prevPage, nextPage, index }) => {
   const pages = [...Array(totalPages).keys()].map((num) => num + 1);
-  console.log(index);
 
   return (
     <div className="flex justify-center p-5">
